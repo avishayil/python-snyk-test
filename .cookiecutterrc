@@ -1,0 +1,70 @@
+# This file exists so you can easily regenerate your project.
+#
+# `cookiepatcher` is a convenient shim around `cookiecutter`
+# for regenerating projects (it will generate a .cookiecutterrc
+# automatically for any template). To use it:
+#
+#    pip install cookiepatcher
+#    cookiepatcher gh:ionelmc/cookiecutter-pylibrary python-snyk-test
+#
+# See:
+#    https://pypi.org/project/cookiepatcher
+#
+# Alternatively, you can run:
+#
+#    cookiecutter --overwrite-if-exists --config-file=python-snyk-test/.cookiecutterrc gh:ionelmc/cookiecutter-pylibrary
+
+default_context:
+
+    _extensions:               ['jinja2_time.TimeExtension']
+    _template:                 'gh:ionelmc/cookiecutter-pylibrary'
+    allow_tests_inside_package: 'yes'
+    appveyor:                  'yes'
+    c_extension_function:      'longest'
+    c_extension_module:        '_snyk_test'
+    c_extension_optional:      'no'
+    c_extension_support:       'no'
+    c_extension_test_pypi:     'no'
+    c_extension_test_pypi_username: 'avishayil'
+    codacy:                    'no'
+    codacy_projectid:          '[Get ID from https://app.codacy.com/app/avishayil/python-snyk-test/settings]'
+    codeclimate:               'no'
+    codecov:                   'yes'
+    command_line_interface:    'plain'
+    command_line_interface_bin_name: 'snyk-test'
+    coveralls:                 'yes'
+    coveralls_token:           'TgNxYlM2xh7SrOT7NV7k0HuO31VTvXjnTqjer'
+    distribution_name:         'snyk-test'
+    email:                     'avishay.il@gmail.com'
+    full_name:                 'Avishay Bar'
+    landscape:                 'no'
+    license:                   'MIT license'
+    linter:                    'flake8'
+    package_name:              'snyk_test'
+    pre_commit:                'yes'
+    project_name:              'Snyk Test'
+    project_short_description: 'A package that wraps pysnyk library for easier usage from cli interfaces'
+    pypi_badge:                'yes'
+    pypi_disable_upload:       'no'
+    release_date:              'today'
+    repo_hosting:              'github.com'
+    repo_hosting_domain:       'github.com'
+    repo_name:                 'python-snyk-test'
+    repo_username:             'avishayil'
+    requiresio:                'no'
+    scrutinizer:               'no'
+    setup_py_uses_setuptools_scm: 'yes'
+    setup_py_uses_test_runner: 'yes'
+    sphinx_docs:               'yes'
+    sphinx_docs_hosting:       'https://python-snyk-test.readthedocs.io/'
+    sphinx_doctest:            'yes'
+    sphinx_theme:              'sphinx-py3doc-enhanced-theme'
+    test_matrix_configurator:  'no'
+    test_matrix_separate_coverage: 'no'
+    test_runner:               'pytest'
+    travis:                    'yes'
+    travis_osx:                'no'
+    version:                   '0.0.1'
+    website:                   'https://www.avishay.co.il'
+    year_from:                 '2020'
+    year_to:                   '2020'
