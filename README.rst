@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor|
+      - | |travis|
         | |coveralls| |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
@@ -19,13 +19,9 @@ Overview
     :target: https://readthedocs.org/projects/python-snyk-test
     :alt: Documentation Status
 
-.. |travis| image:: https://api.travis-ci.org/avishayil/python-snyk-test.svg?branch=master
+.. |travis| image:: https://travis-ci.com/avishayil/python-snyk-test.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/avishayil/python-snyk-test
-
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/avishayil/python-snyk-test?branch=master&svg=true
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/avishayil/python-snyk-test
 
 .. |coveralls| image:: https://coveralls.io/repos/avishayil/python-snyk-test/badge.svg?branch=master&service=github
     :alt: Coverage Status
