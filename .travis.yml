@@ -35,9 +35,9 @@ jobs:
         - tox -v
     - stage: deploy
       python: '3.7'
+      install: skip
+      script: skip
       deploy:
-        install: skip
-        script: skip
         provider: pypi
         username: __token__
         password:
