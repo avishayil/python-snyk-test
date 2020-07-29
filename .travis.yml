@@ -43,4 +43,5 @@ jobs:
         password:
           secure: cRci4yNsgCnGDm/xZcBxvuX43C5eQNzmD1XUFq7v/snYYL5wQxWoo+3dBAos+XQOAlEQs475VlcekO/XSK8nWXLtZNsiA8SkRlqU8ROIfu+qnjjxwiPLyRtHCrUngjpmYFjhdQlGk5clDIQWn82l4HhR/gHZ4dUAfQ6amZnhMpjYNVbSoTxz+cBID4agsyaOK7JH/zpqfABXwF5tuCtxC8IFRDIAO9KrBUeL3nSXl9g/JttCh+F1WBeT0DgE/HErCOtR+srOaMvSdiGjIktS/3omVjTcAgFHDYJUw0SE7pZytgN5eBI6wMXQekD3zxHfOfI5XQTb1u2M9iTJc5kl7KuS8Nut4KBqmMeDiQEiFqwpW7y5+WTAvHwLM0jK/YD59yG/heRBnPX+lhUU98KEkVYvTgp7vY9E4qB2nTCPP6DaABTVSA5X26kbpX8RwwLcawu8CWdvo1VhTWfnVPybgLIiD/Gjd5I6ex1bi51dRpXYhpRpMq9NOP8iIPXP+OupCMIElZGteJvJdDBy7jLjhqOpjSDKHQ5Pf3eW7V1DA06oe5rzCwUXrOztNPy/xGlCp+mQcd9BXLL5ONMlRgQQKfih5epVdSm5KBndwgImlTv04oubBguVD7vMlV1VIOwyOMKzP68EWbaKReSm9flq3OAnMQQp9yB4SpnHErBAfu4=
         on:
-          condition: tag IS present OR branch = master
+          all_branches: true
+          condition: $TRAVIS_TAG || TRAVIS_BRANCH = master
