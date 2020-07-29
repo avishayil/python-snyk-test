@@ -19,7 +19,7 @@ Overview
     :target: https://readthedocs.org/projects/python-snyk-test
     :alt: Documentation Status
 
-.. |travis| image:: https://api.travis-ci.org/avishayil/python-snyk-test.svg?branch=master
+.. |travis| image:: https://travis-ci.com/avishayil/python-snyk-test.svg?branch=master
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/avishayil/python-snyk-test
 
