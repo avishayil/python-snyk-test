@@ -1,5 +1,6 @@
 ---
 
+os: linux
 dist: xenial
 language: python
 env:
@@ -8,28 +9,34 @@ env:
     - secure: uGuWaJkcL3F2VVfL1ukclwEAT/WiYRDq0Z64Zxmi8zviSaMMMkYMOsUojEtjVERkhc5gPUpYNbCLng+uUTXc6DcnW3NOERur9P1+rAmMe2CkW74v8g0X4dlCoUO5skOZE8ARp0MtG1tlRyLGi0EsOrWOyXtO0Tc9ktekvW+VMvB+PUn0aEOGTqwiICWVxUUQDP938sSEgPxB7iMMCaWxDw5F6WVubOUWPyUd9RNnyH4g3DiJmdaMucL0okuOR8+JjAAzN3q864wVUbOLbX/EtsE+Vlj3iMJZ3rk9fSSjE5hD0s4JSaDq/6F1d/RfRTSJtIXLS5Ylrv4Ni4LTVHm/ISAnx+K1Rt5ZB52qeSB/A2pygok9BsDyOf7wh7f7OnXckdXlCDwwxhXlKOAyv3K4wLn9NDIA/TqAQqNXNMGNzG3DRsBe8fmxLF6S0c9pHhf6Iw9/Qh8Km5mvZCIlZcnKVIj8YubsJTB3FhhcphtjDQlVOE0DpmgCLoIruyT4arFhY6o69a+79h3RXRiPiG2O3+meZFr7G0nvItMCDwsHi3qyCt0WtiZjw0HoHoWF4hp7CCInuDlJbR2DHrpEgoAr4K0NzbT8DMFGyhB/D2EE9WZzw25SrEI+8+3rvo7CrX15UHnRnAL3p1Hv8wqVGhM8P/fIUUmaAGeo2JxVdaNy7jw=
     - secure: xdRmIerYLf8ffs60XRs0CizH6GrJt+SlOJg7wbES7vwgzRY0J8K31gjODT2xrBcPf6lTqzkQsMA8sS5zH6FG/Y+iwPJF/zknr9VtoXxz1f/gdvlcK0iYxEzVSTW9eCyISQdnIzvh38kxMEwJukVWrYEpWlt8nFiHlBDSNjhxTrfN2DhTxl7o2xW8H1eLLLn3x4orSyPexge6Qj6/eKpXqlhjXBAbct2jxt2W8nkUapTPaa7I5ES6hlmlsQTsLra19yRRN7jyvFfY2sVfKDVx9cxGVBvNE6moTIESrdnK/J11QM1uU+r/h+2d9z2G0uFszSTjdR1yuznckr18ykYaKOEXVF3VSAN0rIdGsekJJmSATmfD7Qka5rW3Xrwinkg8Qcqpmc1zJ8HmsmhMxq+wU+eOxs/DIj+a2i/9zIRt3Rsta2YQ+z9fAhHlV3/26fievv70EQTT2C3W9GFuRCm+s9fLVKEeQAp+JlYoHLFvdkqDJpbC4Gbyl8+MhSJxejzPSlYBmV2aA/pdMP69put2e6oWBxTFgDM03GZMlvrImROlToFrkUG9edeLzSvBZdOQEUCpHP/qd18POxcQOiCaFPod/nidr+Uazh+lWrDuGLdSP90VjY4InDN8w/jcewtbsj1N4C/8mTkzeKYWKwRkJm4DrQdkmRDKy4pdfVqb1X0=
     - secure: dR9Fyum/hob+92dOJccgGCJH8dNeG2JjHj3mvcaKn4stT+vnJ3iK4MzVNfmgCIIezeFCtfwjTC5MIVbbqZ/iFwf0UPPlPoKw62jihlJs9rWROrZMfYFSpa+MV2AGZv7hGYfBxDnYac5zGV0cNzfBHIdnPIHGewEnkT1scj6hOD1/CAMZVt3og3r0C01gYmm//kaROroOq+EDESN799VXg4/Z5vkdoywAd72WlOrO9FKFAqi3ztSfF5o7HZ8N9K5Z0oRBvpK6JnXbs+ah8A2Jx6hWKH48pEjk5GjX+DnlzFHdxpkCwnHwWI1ukw2QQRlghvIxkcpXDC3JoxtulRjUquKeFyHo1bFTtTyl+w4U7bFJQgxLzwo8ndKZ5x+OGlO6lG3HUDWuz+rRa8D4+gsvUibMhTeMUpADGPKog1YQk0igi3nqaV4VJOfMpFQK9IdK1WjkywRJVjW2kfnivfBslf7Qik/uy6eO/wMQIinYkRm53g+Qob+6DBpeulDVRHrQaadJYJ3Hl9WCWUj4rWgusyPUmrna8H/cF6NRppNnKx89b375rpl84KmodlicvKtEF9MEsVBWKIV5e12FPCTlmG8p0cIlf8Kk80CYvCUzo7D/dsDukO2xyNAV3hjqUWyfZqZYiz08b8uUNV2WTOIjZYr189/dz+h8O9tNht+9IT8=
-install:
-  - nvm install node
-  - python -mpip install --progress-bar=off tox -rci/requirements.txt
-  - npm install -g snyk
-script:
-  - snyk auth $SNYK_TOKEN
-  - snyk config set org_id=$SNYK_ORG_ID
-  - tox -v
-  - bash <(curl -s https://codecov.io/bash)
 jobs:
   include:
     - python: '3.7'
       env:
         - TOXENV=py37
+      install:
+        - nvm install node
+        - python -mpip install --progress-bar=off tox -rci/requirements.txt
+        - npm install -g snyk
+      script:
+        - snyk auth $SNYK_TOKEN
+        - snyk config set org_id=$SNYK_ORG_ID
+        - tox -v
     - python: '3.8'
       env:
         - TOXENV=py38
+      install:
+        - nvm install node
+        - python -mpip install --progress-bar=off tox -rci/requirements.txt
+        - npm install -g snyk
+      script:
+        - snyk auth $SNYK_TOKEN
+        - snyk config set org_id=$SNYK_ORG_ID
+        - tox -v
     - stage: deploy
       python: '3.7'
-      env:
-        - TOXENV=py37
       deploy:
+        install: skip
         script: skip
         provider: pypi
         username: __token__
