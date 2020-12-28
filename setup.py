@@ -67,7 +67,7 @@ setup(
     ],
     python_requires='>=3.7',
     install_requires=[
-        'pysnyk@git+https://github.com/avishayil/pysnyk@patch-1#egg=pysnyk',
+        'pysnyk',
         'pandas',
     ],
     extras_require={
