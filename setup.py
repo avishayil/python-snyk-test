@@ -28,7 +28,7 @@ setup(
     use_scm_version={
         'local_scheme': 'dirty-tag',
         'write_to': 'src/snyk_test/_version.py',
-        'fallback_version': '0.0.1',
+        'fallback_version': '0.0.2',
     },
     license='MIT',
     description='A package that wraps pysnyk library for easier usage from cli interfaces',

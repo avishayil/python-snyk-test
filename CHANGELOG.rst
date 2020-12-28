@@ -6,3 +6,8 @@ Changelog
 ------------------
 
 * First release on PyPI.
+
+0.0.2 (2020-12-28)
+------------------
+
+* Updated pysnyk version

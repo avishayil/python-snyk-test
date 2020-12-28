@@ -64,7 +64,7 @@ default_context:
     test_runner:               'pytest'
     travis:                    'yes'
     travis_osx:                'no'
-    version:                   '0.0.1'
+    version:                   '0.0.2'
     website:                   'https://www.avishay.co.il'
     year_from:                 '2020'
     year_to:                   '2020'
