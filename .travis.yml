@@ -16,7 +16,7 @@ jobs:
         - TOXENV=py37
       install:
         - nvm install node
-        - python -mpip install --progress-bar=off tox -rci/requirements.txt
+        - python -m pip install --progress-bar=off tox -rci/requirements.txt
         - npm install -g snyk
       script:
         - snyk auth $SNYK_TOKEN
@@ -27,7 +27,7 @@ jobs:
         - TOXENV=py38
       install:
         - nvm install node
-        - python -mpip install --progress-bar=off tox -rci/requirements.txt
+        - python -m pip install --progress-bar=off tox -rci/requirements.txt
         - npm install -g snyk
       script:
         - snyk auth $SNYK_TOKEN

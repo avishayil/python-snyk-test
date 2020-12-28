@@ -71,7 +71,7 @@ Then install the package using ``pip``
 
 ::
 
-    pip install snyk-test --no-deps && pip install snyk-test
+    pip install snyk-test
 
 You can also install the in-development version with::
 
